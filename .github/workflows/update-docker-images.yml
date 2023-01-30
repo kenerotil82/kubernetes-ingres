@@ -93,7 +93,7 @@ jobs:
           fetch-depth: 0
           ref: refs/tags/v${{ needs.variables.outputs.kic-tag }}
       - name: Setup Golang Environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: ${{ needs.variables.outputs.go_version }}
       - name: Determine GOPATH
