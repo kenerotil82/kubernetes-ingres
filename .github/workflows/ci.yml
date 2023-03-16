@@ -57,7 +57,7 @@ jobs:
         run: |
           echo "::set-output name=go_version::$(grep "go 1." go.mod | cut -d " " -f 2)"
       - name: Setup Golang Environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ steps.vars.outputs.go_version }}
       - name: Determine GOPATH
@@ -80,7 +80,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Golang Environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ needs.checks.outputs.go_version }}
       - name: Build binary
@@ -105,7 +105,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Setup Golang Environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ needs.checks.outputs.go_version }}
       - name: Run Tests
@@ -222,7 +222,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Golang Environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ needs.checks.outputs.go_version }}
       - name: Publish Release Notes on new tag
