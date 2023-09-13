@@ -289,7 +289,7 @@ jobs:
         if: github.event_name != 'pull_request'
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v5
         with:
           images: |
             nginx/nginx-ingress
