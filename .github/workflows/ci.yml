@@ -226,7 +226,7 @@ jobs:
         with:
           go-version: ${{ needs.checks.outputs.go_version }}
       - name: Publish Release Notes on new tag
-        uses: release-drafter/release-drafter@v5
+        uses: release-drafter/release-drafter@v6
         with:
             publish: true
         env:
